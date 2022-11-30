@@ -39,10 +39,21 @@
 | postcode | String |
 | street   | String |
 
-#### GET - Request person with given ID
+#### GET - Request person / house / address with given ID
 
-#### GET - Request house with given ID
-
-#### GET - Request address with given ID
+`/api/people/:id`
+`/api/houses/:id`
+`/api/addresses/:id`
 
 #### GET - Request people within given age range and/or household amount
+
+`/api/people?minAge=0&maxAge=130`
+| Field | Type | Description
+| ----- | ---- | -------
+| minAge | int | Minimum age value<br />Range minimum value: `0`
+| maxAge | int | Maximum age value<br />Range maximum value: `130`
+`/api/people?householdAmount=4`
+| Field | Type | Description
+| --------------- | ---- | -------
+| householdAmount | int | Minimum age value<br />Range: `0` - `20`
+`/api/people?minAge={int}&maxAge={int}&householdAmount={int}`
